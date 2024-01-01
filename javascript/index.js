@@ -16,10 +16,22 @@ function handleIntersection(entries) {
     });
 }
 
+function toggleHeaderContent() {
+    const header_contact_info = document.getElementById("contact-info-header");
+
+    if (header_contact_info.style.opacity == "0") {
+        header_contact_info.style.opacity = "1";
+        header_contact_info.style.display = "flex";
+    } else {
+        header_contact_info.style.opacity = "0";
+        header_contact_info.style.display = "none";
+    }
+}
+
 const observer = new IntersectionObserver(handleIntersection, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.7
+    threshold: 0.5
 });
 
 const contentChildElements = document.querySelectorAll(".article-gradient-bg");
@@ -56,10 +68,10 @@ document.addEventListener("scroll", function () {
     const headerTriggerVisible = ElementIsInViewport(header_trigger);
 
     if (!headerTriggerVisible) {
-        if (header.style.display === "none") return;
+        header.style.visibility = "hidden";
         header.style.opacity = "0";
     } else {
-        if (header.style.display === "block") return;
+        header.style.visibility = "visible";
         header.style.opacity = "1";
     }
 }, {
