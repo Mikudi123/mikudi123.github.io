@@ -82,14 +82,19 @@
 }
 
 
-html,
-body {
+html {
     --article-bg-color: #dfdfdf;
     --black-basic-color: #111111;
     --white-basic-color: rgb(255, 239, 239);
     --gradient-violet-to-yellow-other-way: linear-gradient(30deg, #36398d, #a42380, #ff9034);
     --gradient-violet-to-yellow: linear-gradient(30deg, #ff9034, #a42380, #36398d);
 
+    height: -webkit-fill-available;
+    scrollbar-color: #888 var(--white-basic-color);
+    scrollbar-width: thin;
+}
+
+body {
     font-size: clamp(1.0em, 1.0vw, 1.5em);
     background-color: var(--black-basic-color);
     font-family: "Roboto Regular";
@@ -103,15 +108,12 @@ body {
 
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    height: -webkit-fill-available;
 
     margin: auto;
-    scrollbar-color: #888 white;
-    scrollbar-width: thin;
 }
 
 #gradient-bg {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     position: fixed;
     background: var(--gradient-violet-to-yellow);
