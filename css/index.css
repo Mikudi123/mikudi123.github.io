@@ -89,7 +89,6 @@ html {
     --gradient-violet-to-yellow-other-way: linear-gradient(30deg, #36398d, #a42380, #ff9034);
     --gradient-violet-to-yellow: linear-gradient(30deg, #ff9034, #a42380, #36398d);
 
-    height: -webkit-fill-available;
     scrollbar-color: #888 var(--white-basic-color);
     scrollbar-width: thin;
 }
@@ -107,6 +106,7 @@ body {
 
 #gradient-bg {
     min-height: 100%;
+    min-width: 100%;
     position: fixed;
 
     background: var(--gradient-violet-to-yellow);
