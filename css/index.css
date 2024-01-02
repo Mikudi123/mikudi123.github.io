@@ -34,6 +34,23 @@
     }
 }
 
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .animation-fade-in-from-left {
     opacity: 0;
     transform: translateX(-20%);
@@ -73,7 +90,14 @@ body {
     background: var(--gradient-violet-to-yellow);
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 100%;
+    min-height: 100vh;
+
+    margin: auto;
+    scrollbar-color: #888 white;
+    scrollbar-width: thin;
 }
 
 * {
@@ -89,7 +113,6 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    backdrop-filter: blur();
     text-align: center;
     z-index: 1000;
     transition: visibility .5s, opacity .5s;
@@ -194,7 +217,7 @@ body {
 
 .article-container {
     width: 65%;
-    min-width: 300px;
+    min-width: min-content;
     position: static;
 }
 
@@ -243,6 +266,7 @@ the p-elements itself should have a transparent background which then shows the 
 
 #content .content-child p.list {
     padding: calc(5px + 2%);
+    padding-top: 0;
     background: var(--gradient-violet-to-yellow-other-way);
     background-clip: text;
     color: transparent;
@@ -271,8 +295,7 @@ the p-elements itself should have a transparent background which then shows the 
     background: var(--gradient-violet-to-yellow-other-way);
     background-clip: text;
     color: transparent;
-    padding-top: calc(5px + 2%);
-    padding-left: calc(5px + 2%);
+    padding: calc(5px + 2%);
 }
 
 .content-small-titles {
