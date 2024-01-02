@@ -107,7 +107,7 @@ body {
     background: var(--gradient-violet-to-yellow);
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover;
 }
 
