@@ -100,8 +100,7 @@ body {
     font-family: "Roboto Regular";
     color: var(--white-basic-color);
 
-    height: 100vh;
-    height: 100svh;
+    min-height: 100vh;
     margin: auto;
 
     background: var(--gradient-violet-to-yellow);
