@@ -34,6 +34,14 @@
     }
 }
 
+/* Styles for screens up to 767px wide (typical mobile devices) */
+/* This is easier than tweaking with the width so that's why this is here */
+@media only screen and (max-width: 768px) {
+    .article-container {
+        width: 90% !important;
+    }
+}
+
 
 ::-webkit-scrollbar {
     width: 5px;
@@ -229,7 +237,7 @@ body {
 }
 
 .article-container {
-    width: 65%;
+    width: 60%;
     min-width: min-content;
     position: static;
 }
