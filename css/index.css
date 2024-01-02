@@ -122,6 +122,10 @@ body {
     background-attachment: fixed;
     background-size: cover;
     z-index: 0;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0
 }
 
 * {
