@@ -100,13 +100,18 @@ body {
     font-family: "Roboto Regular";
     color: var(--white-basic-color);
 
-    min-height: 100vh;
+    height: 100vh;
+    height: 100svh;
     margin: auto;
+}
+
+#gradient-bg {
+    min-height: 100%;
+    position: fixed;
 
     background: var(--gradient-violet-to-yellow);
     background-repeat: no-repeat;
     background-position: center;
-    /* background-attachment: fixed; */
     background-size: cover;
 }
 
@@ -117,7 +122,7 @@ body {
 }
 
 main {
-    /* position: absolute; */
+    position: absolute;
 }
 
 #header {
