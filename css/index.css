@@ -87,16 +87,27 @@ body {
     font-family: "Roboto Regular";
     color: var(--white-basic-color);
 
-    background: var(--gradient-violet-to-yellow);
+    /* background: var(--gradient-violet-to-yellow);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
+
     min-height: 100vh;
     min-height: -webkit-fill-available;
 
     margin: auto;
     scrollbar-color: #888 white;
     scrollbar-width: thin;
+}
+
+#gradient-bg {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: var(--gradient-violet-to-yellow);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 * {
