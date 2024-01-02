@@ -259,19 +259,27 @@ body {
 the p-elements itself should have a transparent background which then shows the gradient background */
 #content .content-child p {
     padding: calc(5px + 2%);
-    background: var(--gradient-violet-to-yellow-other-way);
-    background-clip: text;
-    color: transparent;
 }
 
 #content .content-child p.list {
     padding: calc(5px + 2%);
     padding-top: 0;
-    background: var(--gradient-violet-to-yellow-other-way);
-    background-clip: text;
-    color: transparent;
     margin-left: 6%;
     line-height: 30px;
+}
+
+.gradient-bg-text {
+    background-color: #36398d;
+    background-image: var(--gradient-violet-to-yellow-other-way);
+    background-image: conic-gradient(30deg, #36398d, #a42380, #ff9034); /* Fallback */
+    background-size: 100%;
+    background-clip: text;
+    color: transparent;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 #content .content-child img {
@@ -291,10 +299,8 @@ the p-elements itself should have a transparent background which then shows the 
 }
 
 .article-title {
+    font-family: Roboto Bold;
     font-size: clamp(1.2em, 1.0vw, 1.7em);
-    background: var(--gradient-violet-to-yellow-other-way);
-    background-clip: text;
-    color: transparent;
     padding: calc(5px + 2%);
 }
 
