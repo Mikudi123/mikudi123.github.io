@@ -103,6 +103,7 @@ html {
 
     scrollbar-color: #888 var(--white-basic-color);
     scrollbar-width: thin;
+    height: -webkit-fill-available;
 }
 
 body {
@@ -111,9 +112,9 @@ body {
     font-family: "Roboto Regular";
     color: var(--white-basic-color);
 
-    position: absolute;
-    height: 100vh;
-    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     min-height: -webkit-fill-available;
 }
 
@@ -135,6 +136,10 @@ body {
     z-index: 1;
 }
 
+main {
+    flex: 1;
+}
+
 #header {
     cursor: pointer;
     visibility: hidden;
@@ -144,7 +149,6 @@ body {
     position: fixed;
     inset: 0 0 auto;
     top: 0;
-    /* top: calc(10px + (100vh - 100%)); */
     width: 100%;
     padding: 10px 0px 10px 0px;
 
