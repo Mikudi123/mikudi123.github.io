@@ -112,6 +112,7 @@ body {
     color: var(--white-basic-color);
 
     min-height: 100vh;
+    min-height: 100svh;
     min-height: -webkit-fill-available;
 }
 
@@ -132,7 +133,6 @@ body {
     font: inherit;
     z-index: 1;
 }
-
 
 #header {
     cursor: pointer;
