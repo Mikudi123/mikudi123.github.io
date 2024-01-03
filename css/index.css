@@ -107,8 +107,6 @@ body {
     background-color: var(--black-basic-color);
     font-family: "Roboto Regular";
     color: var(--white-basic-color);
-
-    height: 100%;
 }
 
 #gradient-bg {
@@ -131,6 +129,8 @@ body {
 
 main {
     position: absolute;
+    height: 100vh;
+    height: 100dvh;
     width: 100%;
 }
 
@@ -143,6 +143,7 @@ main {
     position: fixed;
     inset: 0 0 auto;
     top: 0;
+    width: 100%;
     padding: 10px 0px 10px 0px;
 
     -webkit-backdrop-filter: blur(30px);
@@ -286,7 +287,6 @@ main {
     padding: 20px;
     border-radius: 3em;
     z-index: 1;
-    line-height: 1.5;
 }
 
 /* The gradient background should be brought from the actual gradient background container
