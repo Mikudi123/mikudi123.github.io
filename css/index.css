@@ -151,6 +151,9 @@ body {
     z-index: 999;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: visibility .5s, opacity .5s;
+
+    border-bottom: 2px solid;
+    border-image: var(--gradient-violet-to-yellow-other-way) 20;
 }
 
 #header-container {
