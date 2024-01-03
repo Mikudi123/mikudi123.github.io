@@ -45,6 +45,9 @@
         width: 90% !important;
     }
 
+    #content .content-child p.list {
+        line-height: 2.0 !important;
+    }
     /* If outside of container */
     /* .marquee-wrapper {
         max-width: 80vw !important;
@@ -286,7 +289,7 @@ main {
     background-color: var(--article-bg-color);
     padding: 20px;
     border-radius: 3em;
-    z-index: 1;
+    line-height: 1.5;
 }
 
 /* The gradient background should be brought from the actual gradient background container
@@ -308,7 +311,7 @@ the p-elements itself should have a transparent background which then shows the 
     padding: calc(5px + 2%);
     padding-top: 0;
     margin-left: 6%;
-    line-height: 30px;
+    line-height: 2.5;
 }
 
 .gradient-bg-text {
