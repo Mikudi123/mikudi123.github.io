@@ -133,6 +133,7 @@ body {
 
 main {
     position: absolute;
+    width: 100%;
 }
 
 #header {
@@ -238,7 +239,6 @@ main {
 
 #content {
     --content-width: 60%;
-    --content-width-vw: 60vw;
 
     padding: 2em;
     display: flex;
@@ -299,11 +299,11 @@ the p-elements itself should have a transparent background which then shows the 
 
 /* This is quite bad way to handle this, but the marquee is tricky to position correctly otherwise */
 .marquee-space-bottom {
-    margin-bottom: 5rem;
+    margin-bottom: 4.5rem;
 }
 
 .marquee-space-top {
-    margin-top: 7.5rem;
+    margin-top: 6rem;
 }
 
 
@@ -373,14 +373,14 @@ the p-elements itself should have a transparent background which then shows the 
 
 /* Marquee credits to Ryan Mulligan (https://codepen.io/hexagoncircle/pen/eYMrGwW) */
 .marquee-wrapper {
-    max-width: var(--content-width);
+    max-width: 80%;
     margin: auto;
     position: relative;
 }
 
 .marquee {
     /* Variables */
-    --gap: 3.5rem;
+    --gap: 3rem;
     --duration: 20s;
     --border: 2px solid #36398d;
     
@@ -425,8 +425,8 @@ the p-elements itself should have a transparent background which then shows the 
 }
 
 .marquee-group span img {
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
     object-fit: contain;
 }
 
