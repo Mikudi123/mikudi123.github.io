@@ -355,8 +355,8 @@ the p-elements itself should have a transparent background which then shows the 
 #content .rounded-img {
     object-fit: cover;
     border-radius: 100%;
-    width: clamp(200px, 30%, 400px);
-    height: clamp(200px, 30%, 400px);
+    width: clamp(200px, 50%, 500px);
+    height: clamp(200px, 50%, 500px);
     padding: calc(5px + 2%);
 }
 
