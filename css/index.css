@@ -108,8 +108,7 @@ body {
     font-family: "Roboto Regular";
     color: var(--white-basic-color);
 
-    height: 100vh;
-    height: 100dvh;
+    height: 100%;
 }
 
 #gradient-bg {
