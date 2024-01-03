@@ -134,7 +134,7 @@ main {
     position: absolute;
     height: 100vh;
     height: 100dvh;
-    width: 100%;
+    min-height: -webkit-fill-available;
 }
 
 #header {
@@ -146,6 +146,7 @@ main {
     position: fixed;
     inset: 0 0 auto;
     top: 0;
+    /* top: calc(10px + (100vh - 100%)); */
     width: 100%;
     padding: 10px 0px 10px 0px;
 
