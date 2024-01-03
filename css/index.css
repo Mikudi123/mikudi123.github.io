@@ -32,6 +32,10 @@
     .animation-fade-in-from-right {
         transform: translateX(0) !important;
     }
+
+    .marquee-group {
+        animation-play-state: paused !important;
+    }
 }
 
 /* Styles for screens up to 767px wide (typical mobile devices) */
@@ -40,6 +44,11 @@
     .article-container {
         width: 90% !important;
     }
+
+    /* If outside of container */
+    /* .marquee-wrapper {
+        max-width: 80vw !important;
+    } */
 }
 
 
@@ -228,6 +237,9 @@ main {
 }
 
 #content {
+    --content-width: 60%;
+    --content-width-vw: 60vw;
+
     padding: 2em;
     display: flex;
     flex-direction: column;
@@ -240,7 +252,7 @@ main {
 }
 
 .article-container {
-    width: 60%;
+    width: var(--content-width);
     min-width: min-content;
     position: static;
 }
@@ -285,6 +297,16 @@ the p-elements itself should have a transparent background which then shows the 
     padding: calc(5px + 2%);
 }
 
+/* This is quite bad way to handle this, but the marquee is tricky to position correctly otherwise */
+.marquee-space-bottom {
+    margin-bottom: 5rem;
+}
+
+.marquee-space-top {
+    margin-top: 7.5rem;
+}
+
+
 #content .content-child p.list {
     padding: calc(5px + 2%);
     padding-top: 0;
@@ -295,7 +317,8 @@ the p-elements itself should have a transparent background which then shows the 
 .gradient-bg-text {
     background-color: #36398d;
     background-image: var(--gradient-violet-to-yellow-other-way);
-    background-image: conic-gradient(30deg, #36398d, #a42380, #ff9034); /* Fallback */
+    background-image: conic-gradient(30deg, #36398d, #a42380, #ff9034);
+    /* Fallback */
     background-size: 100%;
     background-clip: text;
     color: transparent;
@@ -306,7 +329,7 @@ the p-elements itself should have a transparent background which then shows the 
     -moz-text-fill-color: transparent;
 }
 
-#content .content-child img {
+#content .rounded-img {
     object-fit: cover;
     border-radius: 100%;
     width: clamp(200px, 30%, 400px);
@@ -316,6 +339,7 @@ the p-elements itself should have a transparent background which then shows the 
 
 #content .content-child span {
     width: 100%;
+    position: relative;
 }
 
 .article-wrap-column {
@@ -345,4 +369,73 @@ the p-elements itself should have a transparent background which then shows the 
 
 .content-small-titles.fade-in {
     opacity: 1;
+}
+
+/* Marquee credits to Ryan Mulligan (https://codepen.io/hexagoncircle/pen/eYMrGwW) */
+.marquee-wrapper {
+    max-width: var(--content-width);
+    margin: auto;
+    position: relative;
+}
+
+.marquee {
+    /* Variables */
+    --gap: 3.5rem;
+    --duration: 20s;
+    --border: 2px solid #36398d;
+    
+    padding: 1rem;
+    max-width: 100%;
+
+    border-top: var(--border);
+    border-bottom: var(--border);
+    display: flex;
+    overflow: hidden;
+    gap: var(--gap);
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-mask-image: linear-gradient(var(--mask-direction, to right), hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 20%, hsl(0 0% 0% / 1) 80%, hsl(0 0% 0% / 0));
+    mask-image: linear-gradient(var(--mask-direction, to right), hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 20%, hsl(0 0% 0% / 1) 80%, hsl(0 0% 0% / 0));
+}
+
+.marquee-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    -webkit-animation: scroll var(--duration) linear infinite;
+    animation: scroll var(--duration) linear infinite;
+}
+
+.marquee-group span {
+    max-width: fit-content;
+    max-height: fit-content;
+    font-family: Roboto Bold;
+}
+
+.marquee-group span img {
+    height: 2rem;
+    width: 2rem;
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
 }

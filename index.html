@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mikko Kärki">
+
     <title>Ansioluetteloni</title>
     <link rel="stylesheet" href="/css/index.css?v=1.05">
 </head>
@@ -57,7 +59,7 @@
                                     </span>
                                 </p>
                             </span>
-                            <img src="/media/images/minä_cropped.webp" alt="profile-pic">
+                            <img class="rounded-img" src="/media/images/minä_cropped.webp" alt="profile-pic">
                         </article>
                     </div>
                 </div>
@@ -113,7 +115,7 @@
                             <span>
                                 <h2 class="article-title gradient-bg-text"><span>Yksityiskohtaisemmin
                                         osaamisestani</span></h2>
-                                <p class="gradient-bg-text">
+                                <p class="gradient-bg-text marquee-space-bottom">
                                     <span>
                                         Omien projektien kautta opittua on pääasiassa Web-ohjelmointia erilaisten
                                         nettisivuprojektien muodossa, osassa nettisivuista hyödynnetään eri
@@ -122,7 +124,65 @@
                                     </span>
                                     <br><br>
                                 </p>
-                                <p class="list gradient-bg-text">
+                                <!-- Marquee credits to Ryan Mulligan (https://codepen.io/hexagoncircle/pen/eYMrGwW) -->
+                                <div class="marquee-wrapper">
+                                    <div class="marquee">
+                                        <div class="marquee-group">
+                                            <span>
+                                                <img src="/media/images/react.svg" alt="ReactJS">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/node.svg" alt="NodeJS">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/js.svg" alt="JavaScript">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/html5.svg" alt="HTML5">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/css3-alt.svg" alt="CSS3">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/c-sharp.svg" alt="C#">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/blazor.svg" alt="Blazor">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/database-solid.svg" alt="Database solutions">
+                                            </span>
+                                        </div>
+
+                                        <div aria-hidden="true" class="marquee-group">
+                                            <span>
+                                                <img src="/media/images/react.svg" alt="ReactJS">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/node.svg" alt="NodeJS">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/js.svg" alt="JavaScript">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/html5.svg" alt="HTML5">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/css3-alt.svg" alt="CSS3">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/c-sharp.svg" alt="C#">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/blazor.svg" alt="Blazor">
+                                            </span>
+                                            <span>
+                                                <img src="/media/images/database-solid.svg" alt="Database solutions">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="list gradient-bg-text marquee-space-top">
                                     <span>
                                         • Windows-käyttöjärjestelmät<br>
                                         • Debian- ja Ubuntu-pohjaiset palvelimet sekä Windows Server<br>
@@ -283,6 +343,7 @@
                         </article>
                     </div>
                 </div>
+
             </div>
         </div>
     </main>
