@@ -42,12 +42,17 @@
 /* This is easier than tweaking with the width so that's why this is here */
 @media only screen and (max-width: 768px) {
     .article-container {
-        width: 90% !important;
+        width: 95% !important;
+    }
+
+    .article-with-img {
+        flex-direction: column-reverse !important;
     }
 
     #content .content-child p.list {
         line-height: 2.0 !important;
     }
+
     /* If outside of container */
     /* .marquee-wrapper {
         max-width: 80vw !important;
@@ -321,7 +326,7 @@ the p-elements itself should have a transparent background which then shows the 
     background-color: var(--purple-color);
     background-image: var(--gradient-violet-to-yellow-other-way);
     background-image: conic-gradient(30deg, var(--purple-color), var(--pink-color), var(--orange-color));
-    
+
     /* Fallback */
     background-size: 100%;
     background-clip: text;
@@ -386,7 +391,7 @@ the p-elements itself should have a transparent background which then shows the 
     --gap: 3rem;
     --duration: 20s;
     --border: 2px solid var(--purple-color);
-    
+
     padding: 1rem;
     max-width: 100%;
 
@@ -406,8 +411,8 @@ the p-elements itself should have a transparent background which then shows the 
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-mask-image: linear-gradient(var(--mask-direction, to right), hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 20%, hsl(0 0% 0% / 1) 80%, hsl(0 0% 0% / 0));
-    mask-image: linear-gradient(var(--mask-direction, to right), hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 20%, hsl(0 0% 0% / 1) 80%, hsl(0 0% 0% / 0));
+    -webkit-mask-image: linear-gradient(to right, hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 20%, hsl(0 0% 0% / 1) 80%, hsl(0 0% 0% / 0));
+    mask-image: linear-gradient(to right, hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 20%, hsl(0 0% 0% / 1) 80%, hsl(0 0% 0% / 0));
 }
 
 .marquee-group {
