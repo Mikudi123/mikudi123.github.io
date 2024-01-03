@@ -1,3 +1,8 @@
+const header_contact_info = document.getElementById("contact-info-header");
+const header_trigger = document.getElementById("header-trigger");
+const header = document.getElementById("header");
+const observed_content = document.getElementById("observe");
+
 // Return true if given element is shown in viewport (minus the height of the element from the top)
 function ElementIsInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -16,6 +21,7 @@ function handleIntersection(entries) {
     });
 }
 
+// Rework to classes at somepoint, inline styles are baaaad
 function toggleHeaderContent() {
     const header_contact_info = document.getElementById("contact-info-header");
 
@@ -34,14 +40,8 @@ const observer = new IntersectionObserver(handleIntersection, {
     threshold: 0.3
 });
 
-const contentChildElements = document.querySelectorAll(".article-gradient-bg");
-const articleTitles = document.querySelectorAll(".content-small-titles");
-
-contentChildElements.forEach(element => {
-    observer.observe(element);
-});
-
-articleTitles.forEach(element => {
+const observedElements = document.querySelectorAll(".article-gradient-bg, .content-small-titles");
+observedElements.forEach(element => {
     observer.observe(element);
 });
 
@@ -54,7 +54,6 @@ function checkWidthAndAddClass(element) {
 }
 
 const articleContainers = document.querySelectorAll(".article-with-img");
-
 window.addEventListener("resize", function () {
     articleContainers.forEach(function (element) {
         checkWidthAndAddClass(element);
@@ -62,8 +61,6 @@ window.addEventListener("resize", function () {
 });
 
 // This is for the header to show, if "Mikko Kärki" is not visible -> header will show
-const header_trigger = document.getElementById("header-trigger");
-const header = document.getElementById("header");
 document.addEventListener("scroll", function () {
     const headerTriggerVisible = ElementIsInViewport(header_trigger);
 
@@ -78,6 +75,5 @@ document.addEventListener("scroll", function () {
     passive: true
 });
 
-const observed_content = document.getElementById("observe");
 observer.observe(observed_content);
 window.dispatchEvent(new Event("resize"));
