@@ -110,6 +110,11 @@ body {
     background-color: var(--black-basic-color);
     font-family: "Roboto Regular";
     color: var(--white-basic-color);
+
+    position: absolute;
+    height: 100vh;
+    height: 100dvh;
+    min-height: -webkit-fill-available;
 }
 
 #gradient-bg {
@@ -128,13 +133,6 @@ body {
     padding: 0;
     font: inherit;
     z-index: 1;
-}
-
-main {
-    position: absolute;
-    height: 100vh;
-    height: 100dvh;
-    min-height: -webkit-fill-available;
 }
 
 #header {
@@ -411,7 +409,6 @@ the p-elements itself should have a transparent background which then shows the 
 .marquee-group {
     flex-shrink: 0;
     display: flex;
-    align-items: center;
     justify-content: space-around;
     gap: var(--gap);
     min-width: 100%;
@@ -420,8 +417,8 @@ the p-elements itself should have a transparent background which then shows the 
 }
 
 .marquee-group span {
-    max-width: fit-content;
-    max-height: fit-content;
+    height: 2.5rem;
+    width: 2.5rem;
     font-family: Roboto Bold;
 }
 
