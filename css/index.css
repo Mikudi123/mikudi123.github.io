@@ -314,13 +314,14 @@ the p-elements itself should have a transparent background which then shows the 
 }
 
 .gradient-bg-text {
-    /* Fallback */
-    background-size: 100%;
-    background-clip: text;
-
     background-color: #36398d;
     background-image: var(--gradient-violet-to-yellow-other-way);
     background-image: conic-gradient(30deg, #36398d, #a42380, #ff9034);
+    
+    /* Fallback */
+    background-size: 100%;
+    background-clip: text;
+    color: transparent;
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -338,7 +339,6 @@ the p-elements itself should have a transparent background which then shows the 
 
 #content .content-child span {
     width: 100%;
-    position: relative;
 }
 
 .article-wrap-column {
