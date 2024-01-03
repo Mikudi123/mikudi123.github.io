@@ -97,9 +97,12 @@
 html {
     --article-bg-color: #dfdfdf;
     --black-basic-color: #111111;
+    --purple-color: #36398d;
+    --pink-color: #a42380;
+    --orange-color: #ff9034;
     --white-basic-color: rgb(255, 239, 239);
-    --gradient-violet-to-yellow-other-way: linear-gradient(30deg, #36398d, #a42380, #ff9034);
-    --gradient-violet-to-yellow: linear-gradient(30deg, #ff9034, #a42380, #36398d);
+    --gradient-violet-to-yellow-other-way: linear-gradient(30deg, var(--purple-color), var(--pink-color), var(--orange-color));
+    --gradient-violet-to-yellow: linear-gradient(30deg, var(--orange-color), var(--pink-color), var(--purple-color));
 
     scrollbar-color: #888 var(--white-basic-color);
     scrollbar-width: thin;
@@ -315,9 +318,9 @@ the p-elements itself should have a transparent background which then shows the 
 }
 
 .gradient-bg-text {
-    background-color: #36398d;
+    background-color: var(--purple-color);
     background-image: var(--gradient-violet-to-yellow-other-way);
-    background-image: conic-gradient(30deg, #36398d, #a42380, #ff9034);
+    background-image: conic-gradient(30deg, var(--purple-color), var(--pink-color), var(--orange-color));
     
     /* Fallback */
     background-size: 100%;
@@ -382,7 +385,7 @@ the p-elements itself should have a transparent background which then shows the 
     /* Variables */
     --gap: 3rem;
     --duration: 20s;
-    --border: 2px solid #36398d;
+    --border: 2px solid var(--purple-color);
     
     padding: 1rem;
     max-width: 100%;
