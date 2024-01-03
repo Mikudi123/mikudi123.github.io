@@ -306,7 +306,6 @@ the p-elements itself should have a transparent background which then shows the 
     margin-top: 6rem;
 }
 
-
 #content .content-child p.list {
     padding: calc(5px + 2%);
     padding-top: 0;
@@ -315,13 +314,13 @@ the p-elements itself should have a transparent background which then shows the 
 }
 
 .gradient-bg-text {
-    background-color: #36398d;
-    background-image: var(--gradient-violet-to-yellow-other-way);
-    background-image: conic-gradient(30deg, #36398d, #a42380, #ff9034);
     /* Fallback */
     background-size: 100%;
     background-clip: text;
-    color: transparent;
+
+    background-color: #36398d;
+    background-image: var(--gradient-violet-to-yellow-other-way);
+    background-image: conic-gradient(30deg, #36398d, #a42380, #ff9034);
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
