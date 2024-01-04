@@ -150,7 +150,7 @@ body {
 }
 
 #gradient-bg {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: fixed;
     z-index: 0;
@@ -295,9 +295,8 @@ the p-elements itself should have a transparent background which then shows the 
 
 .gradient-bg-text {
     background-color: var(--purple-color);
-    background-image: var(--gradient-violet-to-yellow-other-way);
     background-image: conic-gradient(30deg, var(--purple-color), var(--pink-color), var(--orange-color));
-
+    background-image: var(--gradient-violet-to-yellow-other-way);
     /* Fallback */
     background-size: 100%;
     background-clip: text;
