@@ -151,7 +151,6 @@ body {
 
 #gradient-bg {
     height: 100vh;
-    height: 100svh;
     width: 100%;
     position: fixed;
     z-index: 0;
