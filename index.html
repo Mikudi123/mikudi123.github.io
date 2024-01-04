@@ -8,7 +8,8 @@
     <meta name="copyright" content="Mikko Kärki">
 
     <title>Ansioluetteloni</title>
-    <link rel="stylesheet" href="/css/index.css?v=1.26">
+    <link rel="stylesheet" href="/css/index.css?v=1.27">
+    <link rel="stylesheet" href="/css/header.css?v=1.01">
 </head>
 
 <body>
@@ -16,12 +17,19 @@
 
     <header id="header" onclick="toggleHeaderContent()">
         <div id="header-container">
-            <span id="header-title">Ansioluettelo - Mikko Kärki</span>
-            <div id="contact-info-header" onclick="event.stopPropagation()">
-                <hr id="header-separator">
-                <span class="header-text">mikkokarki@hotmail.com</span>
-                <span class="header-text">+358 40 1498746</span>
-            </div>
+            <span class="header-item">
+                <span id="header-title">Ansioluettelo - Mikko Kärki</span>
+                <div id="contact-info-header" onclick="event.stopPropagation()">
+                    <hr id="header-separator">
+                    <span class="header-text">mikkokarki@hotmail.com</span>
+                    <span class="header-text">+358 40 1498746</span>
+                </div>
+            </span>
+            <span id="contact-whatsapp-span" class="header-item" onclick="event.stopPropagation()">
+                <a aria-label="Chat on WhatsApp" href="https://wa.me/358401498746" target="_blank">
+                    <img alt="Chat on WhatsApp" src="/media/images/whatsapp.svg">
+                </a>
+            </span>
         </div>
     </header>
 

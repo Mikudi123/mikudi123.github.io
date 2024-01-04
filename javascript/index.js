@@ -24,13 +24,18 @@ function handleIntersection(entries) {
 // Rework to classes at somepoint, inline styles are baaaad
 function toggleHeaderContent() {
     const header_contact_info = document.getElementById("contact-info-header");
+    const contact_whatsapp_span = document.getElementById("contact-whatsapp-span");
 
     if (header_contact_info.style.opacity == "0") {
         header_contact_info.style.opacity = "1";
         header_contact_info.style.display = "flex";
+        contact_whatsapp_span.style.display = "block";
+        contact_whatsapp_span.style.opacity = "1";
     } else {
         header_contact_info.style.opacity = "0";
         header_contact_info.style.display = "none";
+        contact_whatsapp_span.style.display = "none";
+        contact_whatsapp_span.style.opacity = "0";
     }
 }
 
