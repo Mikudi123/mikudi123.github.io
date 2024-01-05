@@ -35,7 +35,7 @@
     min-width: var(--min-width-page);
 
     /* if backdrop is not supported, eg. old mozilla until 2022 */
-    background-color: rgba(54, 57, 141, 0.8);
+    background-color: rgba(30, 30, 90, 0.8);
     
     z-index: 999;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
