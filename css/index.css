@@ -8,6 +8,21 @@
     src: url("/media/fonts/Roboto-Regular.ttf")
 }
 
+@keyframes arrow-down-bounce {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -15,24 +30,6 @@
 
     100% {
         opacity: 1;
-    }
-}
-
-@keyframes rotate-wiggle {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(10deg);
-    }
-    50% {
-        transform: rotate(-20deg);
-    }
-    75% {
-        transform: rotate(10deg);
-    }
-    100% {
-        transform: rotate(0deg);
     }
 }
 
@@ -176,14 +173,15 @@ body {
 }
 
 #huge-text-title {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 0 3em 0 3em;
     font-family: Roboto Bold;
     text-align: center;
-    height: calc(100vh - 5em);
+    height: 100vh;
     user-select: none;
 }
 
@@ -215,6 +213,14 @@ body {
     padding-top: .5em;
     animation-delay: 3.5s;
     text-shadow: 5px 5px 5px var(--black-basic-color);
+}
+
+#arrow-down {
+    position: absolute;
+    bottom: 0;
+    filter: drop-shadow(5px 5px 5px var(--black-basic-color));
+    animation: arrow-down-bounce 2s ease infinite;
+    transition: opacity .3s ease;
 }
 
 #content {
@@ -411,7 +417,6 @@ the p-elements itself should have a transparent background which then shows the 
     from {
         transform: translateX(0);
     }
-
     to {
         transform: translateX(calc(-100% - var(--gap)));
     }

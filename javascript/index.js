@@ -2,11 +2,12 @@ const header_contact_info = document.getElementById("contact-info-header");
 const header_trigger = document.getElementById("header-trigger");
 const header = document.getElementById("header");
 const observed_content = document.getElementById("observe");
+const arrow_down = document.getElementById("arrow-down");
+const arrow_trigger = document.getElementById("arrow-trigger");
 
 // Return true if given element is shown in viewport (minus the height of the element from the top)
 function ElementIsInViewport(element) {
     const rect = element.getBoundingClientRect();
-
     return rect.bottom <= 0 || rect.top >= (window.innerHeight || document.documentElement.clientHeight)
 }
 
@@ -25,17 +26,22 @@ function handleIntersection(entries) {
 function toggleHeaderContent() {
     const header_contact_info = document.getElementById("contact-info-header");
     const contact_whatsapp_span = document.getElementById("contact-whatsapp-span");
+    const linkedin_span = document.getElementById("linkedin-span");
 
     if (header_contact_info.style.opacity == "0") {
         header_contact_info.style.opacity = "1";
         header_contact_info.style.display = "flex";
         contact_whatsapp_span.style.display = "block";
         contact_whatsapp_span.style.opacity = "1";
+        linkedin_span.style.display = "block";
+        linkedin_span.style.opacity = "1";
     } else {
         header_contact_info.style.opacity = "0";
         header_contact_info.style.display = "none";
         contact_whatsapp_span.style.display = "none";
         contact_whatsapp_span.style.opacity = "0";
+        linkedin_span.style.display = "none";
+        linkedin_span.style.opacity = "0";
     }
 }
 
@@ -65,16 +71,24 @@ window.addEventListener("resize", function () {
     });
 });
 
-// This is for the header to show, if "Mikko Kärki" is not visible -> header will show
 document.addEventListener("scroll", function () {
     const headerTriggerVisible = ElementIsInViewport(header_trigger);
+    const arrowTriggerVisible = ElementIsInViewport(arrow_trigger);
 
+    // This is for the header to show, if "Mikko Kärki" is not visible -> header will show
     if (!headerTriggerVisible) {
         header.style.visibility = "hidden";
         header.style.opacity = "0";
     } else {
         header.style.visibility = "visible";
         header.style.opacity = "1";
+    }
+
+    // This is for the arrow to show, if id="arrow-trigger" is visible -> arrow will dissappear
+    if (!arrowTriggerVisible) {
+        arrow_down.style.opacity = "0";
+    } else {
+        arrow_down.style.opacity = "1";
     }
 }, {
     passive: true

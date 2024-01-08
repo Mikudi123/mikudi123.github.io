@@ -8,8 +8,8 @@
     <meta name="copyright" content="Mikko Kärki">
 
     <title>Ansioluetteloni</title>
-    <link rel="stylesheet" href="/css/index.css?v=1.31">
-    <link rel="stylesheet" href="/css/header.css?v=1.02">
+    <link rel="stylesheet" href="/css/index.css?v=1.32">
+    <link rel="stylesheet" href="/css/header.css?v=1.03">
 </head>
 
 <body>
@@ -25,11 +25,18 @@
                     <span class="header-text">+358 40 1498746</span>
                 </div>
             </span>
-            <span id="contact-whatsapp-span" class="header-item" title="Message me in Whatsapp!" onclick="event.stopPropagation()">
-                <a aria-label="Chat on WhatsApp" href="https://wa.me/358401498746" target="_blank">
-                    <img alt="Chat on WhatsApp" src="/media/images/whatsapp.svg">
-                </a>
-            </span>
+            <div id="social-medias-container" class="header-item">
+                <span id="contact-whatsapp-span" class="social-media-icon" title="Message me in Whatsapp!" onclick="event.stopPropagation()">
+                    <a aria-label="Chat on WhatsApp" href="https://wa.me/358401498746" target="_blank">
+                        <img alt="Chat on WhatsApp" src="/media/images/whatsapp.svg">
+                    </a>
+                </span>
+                <span id="linkedin-span" class="social-media-icon" title="LinkedIn-profile" onclick="event.stopPropagation()">
+                    <a aria-label="Open LinkedIn-profile" href="https://www.linkedin.com/in/mikko-kärki-742b9413b" target="_blank">
+                        <img alt="Chat on WhatsApp" src="/media/images/linkedin-in.svg">
+                    </a>
+                </span>
+            </div>
         </div>
     </header>
 
@@ -41,14 +48,17 @@
                 <br>
                 <span>Mikko Kärki</span>
                 <br>
-                <span id="header-trigger">Lukuaika 4 min - Päivitetty 4.1.2024</span>
+                <span id="header-trigger">Lukuaika 4 min - Päivitetty 08.01.2024</span>
+                <div id="arrow-down">
+                    <img alt="Arrow down" src="/media/images/arrow-down.svg">
+                </div>
             </div>
 
             <h2 style="position: fixed; bottom: 2%; right: 2%; z-index: 1000;">Sivu työn alla!</h2>
             <!-- The actual content starts here -->
             <div id="content">
 
-                <span class="content-small-titles">Hieman minusta</span>
+                <span id="arrow-trigger" class="content-small-titles">Hieman minusta</span>
 
                 <div class="article-container">
                     <div class="article-gradient-bg animation-fade-in-from-left">

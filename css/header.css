@@ -1,12 +1,37 @@
-@media only screen and (max-width: 768px) {
+@keyframes rotate-wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media only screen and (max-width: 820px) {
     #header-container {
         flex-direction: column !important;
     }
 
-    #contact-whatsapp-span {
-        position: inherit !important;
+    #social-medias-container {
         right: auto !important;
+        position: inherit !important;
         margin-top: 10px;
+    }
+
+    .social-media-icon {
         width: 25px !important;
         height: 25px !important;
     }
@@ -74,30 +99,49 @@
     padding: 0 20px 0 20px;
 }
 
-#contact-whatsapp-span {
+#social-medias-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10%;
+    width: 10%;
+    min-width: fit-content;
+    gap: 1em;
+}
+
+.social-media-icon {
     padding: 7px;
     height: 40px;
     width: 40px;
-    position: fixed;
-    right: 10%;
 
-    background-color: #00d25c;
     border-radius: 100%;
     box-shadow: 5px 5px 10px var(--black-basic-color);
-
     transition: transform .2s ease;
 }
 
-#contact-whatsapp-span img {
+#contact-whatsapp-span {
+    background-color: #00d25c;
+}
+
+#linkedin-span {
+    background-color: #0a66c2;
+}
+
+#linkedin-span img {
+    animation: none !important;
+}
+
+.social-media-icon img {
     height: 100%;
     width: 100%;
 }
 
-#contact-whatsapp-span:hover img {
+.social-media-icon:hover img {
     animation: rotate-wiggle .4s ease;
     animation-delay: .2s;
 }
 
-#contact-whatsapp-span:hover {
+.social-media-icon:hover {
     transform: scale(1.1);
 }
