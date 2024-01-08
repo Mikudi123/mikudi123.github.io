@@ -37,6 +37,15 @@
     }
 }
 
+/* if backdrop is supported -> blurred header bg, default is slightly transparent with background-color: rgba(54, 57, 141, 0.8);*/
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  header {
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background-color: transparent !important;
+  }
+}
+
 #header {
     cursor: pointer;
     visibility: hidden;
@@ -50,8 +59,9 @@
     padding: 10px 0px 10px 0px;
     min-width: var(--min-width-page);
 
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
+    /* if backdrop is not supported, eg. old mozilla until 2022 */
+    background-color: rgba(30, 30, 90, 0.8);
+    
     z-index: 999;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: visibility .5s, opacity .5s;
