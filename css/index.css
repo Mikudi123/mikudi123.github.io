@@ -212,7 +212,7 @@ body {
 }
 
 #huge-text-title span:nth-child(5) {
-    padding-top: .5em;
+    padding-top: 5px;
     animation-delay: 3.5s;
     text-shadow: 5px 5px 5px var(--black-basic-color);
 }
