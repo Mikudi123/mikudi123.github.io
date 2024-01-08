@@ -237,7 +237,7 @@ body {
 #arrow-down img {
     animation: fade-out 1s linear infinite;
     animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -8s);
+    animation-delay: calc(var(--scroll) * -11s);
     animation-iteration-count: 1;
     animation-fill-mode: both;
 }
