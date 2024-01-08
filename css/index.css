@@ -182,7 +182,7 @@ body {
     font-family: Roboto Bold;
     text-align: center;
     min-height: 95vh;
-    min-height: 100dvh;
+    min-height: 100svh;
     height: -webkit-fill-available;
     user-select: none;
 }
