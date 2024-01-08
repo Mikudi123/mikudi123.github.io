@@ -25,23 +25,18 @@ function handleIntersection(entries) {
 // Rework to classes at somepoint, inline styles are baaaad
 function toggleHeaderContent() {
     const header_contact_info = document.getElementById("contact-info-header");
-    const contact_whatsapp_span = document.getElementById("contact-whatsapp-span");
-    const linkedin_span = document.getElementById("linkedin-span");
+    const social_media_icons = document.getElementById("social-medias-container");
 
     if (header_contact_info.style.opacity == "0") {
         header_contact_info.style.opacity = "1";
         header_contact_info.style.display = "flex";
-        contact_whatsapp_span.style.display = "block";
-        contact_whatsapp_span.style.opacity = "1";
-        linkedin_span.style.display = "block";
-        linkedin_span.style.opacity = "1";
+        social_media_icons.style.display = "flex";
+        social_media_icons.style.opacity = "1";
     } else {
         header_contact_info.style.opacity = "0";
         header_contact_info.style.display = "none";
-        contact_whatsapp_span.style.display = "none";
-        contact_whatsapp_span.style.opacity = "0";
-        linkedin_span.style.display = "none";
-        linkedin_span.style.opacity = "0";
+        social_media_icons.style.display = "none";
+        social_media_icons.style.opacity = "0";
     }
 }
 
