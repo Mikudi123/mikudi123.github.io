@@ -181,7 +181,9 @@ body {
     padding: 0 3em 0 3em;
     font-family: Roboto Bold;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: -webkit-fill-available;
     user-select: none;
 }
 
