@@ -2,8 +2,6 @@ const header_contact_info = document.getElementById("contact-info-header");
 const header_trigger = document.getElementById("header-trigger");
 const header = document.getElementById("header");
 const observed_content = document.getElementById("observe");
-const arrow_down = document.getElementById("arrow-down");
-const arrow_trigger = document.getElementById("arrow-down-trigger");
 
 // Return true if given element is shown in viewport (minus the height of the element from the top)
 function ElementIsInViewport(element) {
@@ -67,18 +65,19 @@ window.addEventListener("resize", function () {
 });
 
 document.addEventListener("scroll", function () {
+
+    // --scroll property to body
+    document.body.style.setProperty("--scroll", window.scrollY / (document.body.offsetHeight - window.innerHeight));
+
     const headerTriggerVisible = ElementIsInViewport(header_trigger);
 
     // This is for the header to show, if "Mikko Kärki" is not visible -> header will show
-    // Also this si the point when the arrow-down will trigger
     if (!headerTriggerVisible) {
         header.style.visibility = "hidden";
         header.style.opacity = "0";
-        arrow_down.style.opacity = "1";
     } else {
         header.style.visibility = "visible";
         header.style.opacity = "1";
-        arrow_down.style.opacity = "0";
     }
 }, {
     passive: true
