@@ -2,6 +2,7 @@ const header_contact_info = document.getElementById("contact-info-header");
 const header_trigger = document.getElementById("header-trigger");
 const header = document.getElementById("header");
 const observed_content = document.getElementById("observe");
+const arrow_down = document.getElementById("arrow-down");
 
 // Return true if given element is shown in viewport (minus the height of the element from the top)
 function ElementIsInViewport(element) {
@@ -75,9 +76,11 @@ document.addEventListener("scroll", function () {
     if (!headerTriggerVisible) {
         header.style.visibility = "hidden";
         header.style.opacity = "0";
+        arrow_down.style.opacity = "1";
     } else {
         header.style.visibility = "visible";
         header.style.opacity = "1";
+        arrow_down.style.opacity = "0";
     }
 }, {
     passive: true
